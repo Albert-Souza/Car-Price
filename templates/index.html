@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimativa de Preço de Carro</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Estimativa de Preço de Carro com Machine Learning</h1>
+    <p>Este site utiliza um modelo de aprendizado de máquina para prever o preço de carros usados com base em suas características, como ano de fabricação, volume do motor, quilometragem, modelo, tipo de combustível e transmissão.</p>
+  </header>
+
+  <form action="/evaluate" method="post" id="carPriceForm">
+    <label for="Year">Ano</label>
+    <input type="number" name="Year" id="Year" min="2000" max="2026" step="1" required>
+
+    <label for="Engine_Size">Volume do motor (L)</label>
+    <input type="number" id="Engine_Size" name="Engine_Size" min="1" max="5" step="0.1" required>
+
+    <label for="Mileage">Quilometragem (Km)</label>
+    <input type="number" id="Mileage" name="Mileage" min="0" step="1000" required>
+
+    <label for="Model">Modelo</label>
+    <select name="Model" id="Model">
+      <option value="3 Series">3 Series</option>
+      <option value="5 Series">5 Series</option>
+      <option value="A3">A3</option>
+      <option value="A4">A4</option>
+      <option value="Accord">Accord</option>
+      <option value="C-Class">C-Class</option>
+      <option value="CR-V">CR-V</option>
+      <option value="Camry">Camry</option>
+      <option value="Civic">Civic</option>
+      <option value="Corolla">Corolla</option>
+      <option value="E-Class">E-Class</option>
+      <option value="Elantra">Elantra</option>
+      <option value="Equinox">Equinox</option>
+      <option value="Explorer">Explorer</option>
+      <option value="Fiesta">Fiesta</option>
+      <option value="Focus">Focus</option>
+      <option value="GLA">GLA</option>
+      <option value="Golf">Golf</option>
+      <option value="Impala">Impala</option>
+      <option value="Malibu">Malibu</option>
+      <option value="Optima">Optima</option>
+      <option value="Passat">Passat</option>
+      <option value="Q5">Q5</option>
+      <option value="RAV4">RAV4</option>
+      <option value="Rio">Rio</option>
+      <option value="Sonata">Sonata</option>
+      <option value="Sportage">Sportage</option>
+      <option value="Tiguan">Tiguan</option>
+      <option value="Tucson">Tucson</option>
+      <option value="X5">X5</option>
+    </select>
+
+    <label for="Fuel_Type">Tipo de combustível</label>
+    <select name="Fuel_Type" id="Fuel_Type">
+      <option value="Diesel">Diesel</option>
+      <option value="Electric">Elétrico</option>
+      <option value="Hybrid">Híbrido</option>
+      <option value="Petrol">Gasolina</option>
+    </select>
+
+    <label for="Transmission">Transmissão</label>
+    <select name="Transmission" id="Transmission">
+      <option value="Automatic">Automática</option>
+      <option value="Manual">Manual</option>
+      <option value="Semi-Automatic">Semi-Automática</option>
+    </select>
+
+    <input type="submit" value="Calcular Preço">
+  </form>
+
+  <h2>Preço Estimado: <span id="priceResult">---</span></h2>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/static/js/show-price.js"></script>
+</body>
+</html>
