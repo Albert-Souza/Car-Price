@@ -1,5 +1,7 @@
-# Relatório do Projeto de Estimação de Preço de Carros
+# Estimação de Preço de Carros
 Projeto de Análise, inferência e previsão de preços de carros usados nos EUA
+
+Acesse a aplicação desse projeto [Aqui](https://www.albert-souza.com/projects/car-price-app/).
 
 ## Objetivo
 O objetivo deste projeto é criar um modelo de Machine Learning capaz de estimar o preço (Price) de carros com base em algumas variáveis, como:
